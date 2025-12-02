@@ -33,15 +33,15 @@
 }
 .btn {
   padding: 10px 16px;
-  background: #111827;
+  background: #48b46c;
   color: white;
   border-radius: 8px;
   text-decoration: none;
 }
 .ghost {
   background: transparent;
-  border: 1px solid #111827;
-  color: #111827;
+  border: 1px solid #48b46c;
+  color: #48b46c;
 }
 .rules {
   background: white;
