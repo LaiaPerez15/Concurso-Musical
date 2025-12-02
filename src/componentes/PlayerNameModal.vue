@@ -8,7 +8,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useGameStore } from '../src/stores/game'
+import { useGameStore } from '../stores/game'
 import { useRouter } from 'vue-router'
 
 const store = useGameStore()

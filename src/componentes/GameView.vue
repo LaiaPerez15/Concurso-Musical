@@ -20,10 +20,10 @@
 
 <script setup>
 import { computed } from 'vue'
-import { useGameStore } from '../src/stores/game'
-import PlayerNameModal from './src/componentes/PlayerNameModal.vue'
-import QuestionCard from './src/componentes/QuestionCard.vue'
-import ResultsView from './src/componentes/ResultsView.vue'
+import { useGameStore } from '../stores/game'
+import PlayerNameModal from './PlayerNameModal.vue'
+import QuestionCard from './QuestionCard.vue'
+import ResultsView from './ResultsView.vue'
 
 const store = useGameStore()
 store.init()

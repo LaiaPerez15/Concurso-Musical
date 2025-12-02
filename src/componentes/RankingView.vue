@@ -25,7 +25,7 @@
 </template>
 
 <script setup>
-import { useGameStore } from '../src/stores/game'
+import { useGameStore } from '../stores/game.js'
 const store = useGameStore()
 
 function isLast(r) {

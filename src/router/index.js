@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import LandingPage from './src/componentes/LandingPage.vue'
-import GameView from './src/componentes/GameView.vue'
-import RankingView from './src/componentes/RankingView.vue'
+import LandingPage from '../componentes/LandingPage.vue'
+import GameView from '../componentes/GameView.vue'
+import RankingView from '../componentes/RankingView.vue'
 
 const routes = [
   { path: '/', name: 'Home', component: LandingPage },

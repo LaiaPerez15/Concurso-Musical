@@ -16,7 +16,7 @@
 </template>
 
 <script setup>
-import DotGrid from "./src/components/DotGrid.vue";
+import DotGrid from "./componentes/DotGrid.vue";
 </script>
 
 <style>

@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { songs as defaultSongs } from '../src/data/songs'
+import { songs as defaultSongs } from '../data/songs'
 
 export const useGameStore = defineStore('game', {
   state: () => ({
