@@ -1,14 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeVue from '../views/HomeVue.vue' // o HomeView, lo que uses
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes: [
-    {
-    path: '/',
-    name: 'home',
-    component: HomeVue// o HomeView, lo que uses
-  }
-  ],
-})
+import LandingPage from './src/componentes/LandingPage.vue'
+import GameView from './src/componentes/GameView.vue'
+import RankingView from './src/componentes/RankingView.vue'
 
-export default router
+const routes = [
+  { path: '/', name: 'Home', component: LandingPage },
+  { path: '/game', name: 'Game', component: GameView },
+  { path: '/ranking', name: 'Ranking', component: RankingView }
+]
+
+export default createRouter({
+  history: createWebHistory(),
+  routes
+})
