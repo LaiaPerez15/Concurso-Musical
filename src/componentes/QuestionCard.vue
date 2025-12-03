@@ -24,7 +24,6 @@
 
             <p v-if="audioPlayed && !isPlaying" class="audio-status">✓ Fragmento escuchado</p>
         </div>
-
         <!-- Respuestas -->
         <div class="answers">
             <button v-for="(answer, index) in question.answers" :key="index" class="answer-btn"
