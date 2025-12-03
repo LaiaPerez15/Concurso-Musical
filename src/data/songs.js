@@ -1,7 +1,7 @@
 export const songs = [
   {
     id: 1,
-    audioPath: "/public/songs/Aitana, Sebastián Yatra - Akureyri.mp3",
+    audioPath: "/songs/Aitana-YATRA-Akureyri.mp3", 
     text: "¿Quién canta esta canción?",
     answers: [
       { text: "Aitana y Sebastián Yatra", isCorrect: true },
@@ -12,7 +12,7 @@ export const songs = [
   },
   {
     id: 2,
-    audioPath: "/public/songs/Antonio Orozco - Entre Sobras Y Sobras Me Faltas.mp3",
+    audioPath: "/songs/Antonio Orozco - Entre Sobras Y Sobras Me Faltas.mp3", 
     text: "¿Quién interpreta esta canción?",
     answers: [
       { text: "Antonio Orozco", isCorrect: true },
@@ -23,7 +23,7 @@ export const songs = [
   },
   {
     id: 3,
-    audioPath: "/public/songs/Bruno Mars - The Lazy Song.mp3",
+    audioPath: "/songs/Bruno Mars - The Lazy Song (Official Music Video).mp3", 
     text: "¿Cuál es el título de esta canción?",
     answers: [
       { text: "The Lazy Song", isCorrect: true },
@@ -34,7 +34,7 @@ export const songs = [
   },
   {
     id: 4,
-    audioPath: "/public/songs/C. Tangana - Niño de Elche, La Húngara - Tú Me Dejaste De Querer.mp3",
+    audioPath: "/songs/C. Tangana, Niño de Elche, La Hungara - Tú Me Dejaste De Querer.mp3", 
     text: "¿Quién participa en esta canción?",
     answers: [
       { text: "C. Tangana", isCorrect: true },
@@ -45,7 +45,7 @@ export const songs = [
   },
   {
     id: 5,
-    audioPath: "/public/songs/Calvin Harris - Summer.mp3",
+    audioPath: "/songs/Calvin Harris - Summer (Official Video).mp3",
     text: "¿Quién produce esta canción?",
     answers: [
       { text: "Calvin Harris", isCorrect: true },
@@ -56,7 +56,7 @@ export const songs = [
   },
   {
     id: 6,
-    audioPath: "/public/songs/Daddy Yankee - Limbo.mp3",
+    audioPath: "/songs/Daddy Yankee - Limbo (Video Oficial).mp3", 
     text: "¿Quién canta esta canción?",
     answers: [
       { text: "Daddy Yankee", isCorrect: true },
@@ -67,7 +67,7 @@ export const songs = [
   },
   {
     id: 7,
-    audioPath: "/public/songs/David Bisbal - Mi Princesa.mp3",
+    audioPath: "/songs/David Bisbal - Mi Princesa.mp3", 
     text: "¿Quién interpreta esta canción romántica?",
     answers: [
       { text: "David Bisbal", isCorrect: true },
@@ -78,7 +78,7 @@ export const songs = [
   },
   {
     id: 8,
-    audioPath: "/public/songs/Ed Sheeran - Perfect.mp3",
+    audioPath: "/songs/Ed Sheeran - Perfect (Official Music Video).mp3",
     text: "¿Cuál es el título de esta conocida balada?",
     answers: [
       { text: "Perfect", isCorrect: true },
@@ -89,7 +89,7 @@ export const songs = [
   },
   {
     id: 9,
-    audioPath: "/public/songs/Estopa - Cacho A Cacho.mp3",
+    audioPath: "/songs/Estopa - Cacho A Cacho (Videoclip) (En Directo).mp3", 
     text: "¿Qué grupo canta esta canción?",
     answers: [
       { text: "Estopa", isCorrect: true },
@@ -100,7 +100,7 @@ export const songs = [
   },
   {
     id: 10,
-    audioPath: "/public/songs/Marshmello ft. Bastille - Happier.mp3",
+    audioPath: "/songs/Marshmello ft. Bastille - Happier (Official Music Video).mp3", 
     text: "¿Cuál es el título de esta canción?",
     answers: [
       { text: "Happier", isCorrect: true },
@@ -111,7 +111,7 @@ export const songs = [
   },
   {
     id: 11,
-    audioPath: "/public/songs/Melendi - Tu Jardín Con Enanitos.mp3",
+    audioPath: "/songs/Melendi - Tu Jardín con enanitos (Videoclip oficial).mp3", 
     text: "¿Qué cantante español interpreta este tema?",
     answers: [
       { text: "Melendi", isCorrect: true },
@@ -122,7 +122,7 @@ export const songs = [
   },
   {
     id: 12,
-    audioPath: "/public/songs/Morat, Duki - París.mp3",
+    audioPath: "/songs/Morat, Duki - París (Video Oficial) [cHsKzdyXDH0] (1).mp3",
     text: "¿Quién colabora con Morat en esta canción?",
     answers: [
       { text: "Duki", isCorrect: true },
@@ -133,7 +133,7 @@ export const songs = [
   },
   {
     id: 13,
-    audioPath: "/public/songs/Nacho, Yandel, Bad Bunny - Báilame Remix.mp3",
+    audioPath: "/songs/Nacho, Yandel, Bad Bunny - Báilame (Remix).mp3",
     text: "¿Quién NO participa en esta canción?",
     answers: [
       { text: "Daddy Yankee", isCorrect: true },
@@ -144,7 +144,7 @@ export const songs = [
   },
   {
     id: 14,
-    audioPath: "/public/songs/Nena Daconte - Tenía Tanto Que Darte.mp3",
+    audioPath: "/songs/Nena Daconte - Tenia Tanto Que Darte.mp3", 
     text: "¿De qué grupo/cantante es esta canción?",
     answers: [
       { text: "Nena Daconte", isCorrect: true },
@@ -155,7 +155,7 @@ export const songs = [
   },
   {
     id: 15,
-    audioPath: "/public/songs/Rauw Alejandro - Cosa Guapa.mp3",
+    audioPath: "/songs/Rauw Alejandro - Cosa Guapa (Audio Official).mp3",
     text: "¿Qué artista urbano interpreta esta canción?",
     answers: [
       { text: "Rauw Alejandro", isCorrect: true },
@@ -166,7 +166,7 @@ export const songs = [
   },
   {
     id: 16,
-    audioPath: "/public/songs/ROSALÍA, Yahritza Y Su Esencia - La Perla.mp3",
+    audioPath: "/songs/ROSALÍA, Yahritza Y Su Esencia - La Perla (Official Lyric Video).mp3",
     text: "¿Quién colabora con Rosalía en este tema?",
     answers: [
       { text: "Yahritza Y Su Esencia", isCorrect: true },
@@ -177,7 +177,7 @@ export const songs = [
   },
   {
     id: 17,
-    audioPath: "/public/songs/Shawn Mendes - There's Nothing Holdin Me Back.mp3",
+    audioPath: "/songs/Shawn Mendes - There's Nothing Holdin' Me Back (Official Music Video).mp3", 
     text: "¿Quién canta esta canción?",
     answers: [
       { text: "Shawn Mendes", isCorrect: true },
@@ -188,7 +188,7 @@ export const songs = [
   },
   {
     id: 18,
-    audioPath: "/public/songs/Mariah Carey - All I Want For Christmas Is You.mp3",
+    audioPath: "/songs/Mariah Carey - All I Want for Christmas Is You (Make My Wish Come True Edition).mp3", 
     text: "¿Cuál es el título de esta clásica canción navideña?",
     answers: [
       { text: "All I Want For Christmas Is You", isCorrect: true },
@@ -199,7 +199,7 @@ export const songs = [
   },
   {
     id: 19,
-    audioPath: "/public/songs/David Bisbal - Todo Es Posible En Navidad.mp3",
+    audioPath: "/songs/David Bisbal - Todo Es Posible En Navidad.mp3", 
     text: "¿Qué artista canta esta canción navideña?",
     answers: [
       { text: "David Bisbal", isCorrect: true },
@@ -210,7 +210,7 @@ export const songs = [
   },
   {
     id: 20,
-    audioPath: "/public/songs/El Barrio - Pa Madrid.mp3",
+    audioPath: "/songs/El Barrio - Pa Madrid (Videoclip Oficial).mp3", 
     text: "¿De qué artista es esta canción?",
     answers: [
       { text: "El Barrio", isCorrect: true },

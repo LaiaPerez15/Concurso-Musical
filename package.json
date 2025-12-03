@@ -14,11 +14,11 @@
     "format": "prettier --write src/"
   },
   "dependencies": {
-  "gsap": "^3.13.0",
-  "pinia": "^3.0.3",
-  "vue": "^3.5.22",
-  "vue-router": "^4.6.3",
-  "howler": "^2.2.3"
+    "gsap": "^3.13.0",
+    "howler": "^2.2.4",
+    "pinia": "^3.0.3",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
   },
   "devDependencies": {
     "@eslint/js": "^9.37.0",

@@ -16,7 +16,7 @@ export const useGameStore = defineStore('game', {
 
   actions: {
     init() {
-      if (!this.songs.length) {
+      if (this.songs.length === 0) {
         this.songs = [...defaultSongs]
       }
     },
@@ -26,12 +26,19 @@ export const useGameStore = defineStore('game', {
     },
 
     startGame() {
-      const shuffled = [...this.songs].sort(() => Math.random() - 0.5)
-      this.sessionQuestions = shuffled.slice(0, 10).map(q => ({
+      // 1. Mezclar todas las canciones
+      const allShuffled = [...this.songs].sort(() => Math.random() - 0.5)
+      
+      // 2. Tomar 10 primeras
+      const selectedQuestions = allShuffled.slice(0, 10)
+      
+      // 3. Mezclar respuestas de cada pregunta
+      this.sessionQuestions = selectedQuestions.map(q => ({
         ...q,
         answers: [...q.answers].sort(() => Math.random() - 0.5)
       }))
 
+      // 4. Resetear juego
       this.index = 0
       this.score = 0
       this.correctCount = 0
@@ -40,46 +47,78 @@ export const useGameStore = defineStore('game', {
     },
 
     answerCurrent(selectedIndex, timeListened) {
-      const current = this.sessionQuestions[this.index]
-      const selected = typeof selectedIndex === 'number' ? current.answers[selectedIndex] : null
-
-      this.totalTimeListening += timeListened || 0
-
-      if (selected && selected.isCorrect) {
+      const currentQuestion = this.sessionQuestions[this.index]
+      
+      // Sumar tiempo escuchado (si hay)
+      if (timeListened && timeListened > 0) {
+        this.totalTimeListening += timeListened
+      }
+      
+      // Caso 1: No respondió (tiempo agotado)
+      if (selectedIndex === null) {
+        // 0 puntos - no hacer nada más
+        return
+      }
+      
+      // Caso 2: Respondió
+      const selectedAnswer = currentQuestion.answers[selectedIndex]
+      
+      if (selectedAnswer.isCorrect) {
+        // ACIERTO: +10 puntos
         this.score += 10
         this.correctCount++
-      } else if (selected === null) {
-        // no answer = 0 points
       } else {
-        this.score -= 5
+        // ERROR: -5 puntos (mínimo 0)
+        this.score = Math.max(0, this.score - 5)
       }
     },
 
     finishGame() {
-      const fecha = new Date().toISOString()
-      const porcentaje = Math.round((this.correctCount / this.sessionQuestions.length) * 100)
+      // Calcular porcentaje de aciertos
+      const accuracy = this.sessionQuestions.length > 0
+        ? Math.round((this.correctCount / this.sessionQuestions.length) * 100)
+        : 0
 
-      const entry = {
+      // Crear entrada para el ranking
+      const newEntry = {
         name: this.playerName,
         score: this.score,
-        date: fecha,
-        accuracy: porcentaje,
+        date: new Date().toISOString(),
+        accuracy: accuracy,
         time: this.totalTimeListening
       }
 
-      this.rankings.push(entry)
+      // Añadir a rankings
+      this.rankings.push(newEntry)
+      
+      // Ordenar: 1º puntuación (mayor primero), 2º fecha (más reciente primero), 3º tiempo (menor primero)
+      this.rankings.sort((a, b) => {
+        // 1. Por puntuación (descendente)
+        if (b.score > a.score) return 1
+        if (b.score < a.score) return -1
+        
+        // 2. Por fecha (más reciente primero)
+        const dateA = new Date(a.date)
+        const dateB = new Date(b.date)
+        if (dateB > dateA) return 1
+        if (dateB < dateA) return -1
+        
+        // 3. Por tiempo (menor primero)
+        return a.time - b.time
+      })
 
-      this.rankings.sort((a, b) =>
-        b.score - a.score ||
-        new Date(a.date) - new Date(b.date) ||
-        a.time - b.time
-      )
+      // Mantener solo top 10
+      if (this.rankings.length > 10) {
+        this.rankings = this.rankings.slice(0, 10)
+      }
 
-      this.rankings = this.rankings.slice(0, 10)
+      // Guardar en localStorage
       localStorage.setItem('rankings', JSON.stringify(this.rankings))
-
-      this.lastEntry = entry
-      return entry
+      
+      // Guardar como última entrada
+      this.lastEntry = newEntry
+      
+      return newEntry
     },
 
     clearRankings() {

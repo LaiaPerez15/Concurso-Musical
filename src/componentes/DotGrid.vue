@@ -18,7 +18,7 @@ const props = withDefaults(defineProps<{
   dotSize: 2, // MUCHO más pequeños - 2px de diámetro
   gap: 20,    // Gap más pequeño para mantener densidad
   baseColor: '#666666', // Gris un poco más claro para puntos pequeños
-  activeColor: '#27FF64',
+  activeColor: '#27FF64', 
   proximity: 80, // Proximidad reducida para puntos pequeños
   maxScale: 8    // Escala máxima mayor para que el crecimiento sea más dramático
 });
